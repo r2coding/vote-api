@@ -17,9 +17,9 @@ spec:
       containers:
         - image: quay.io/openshift-pipeline/vote-api:latest
           imagePullPolicy: Always
-          imagePullSecrets:
-          - name: quayadmin-robot-pull-secret
           name: vote-api
           ports:
             - containerPort: 9000
               protocol: TCP
+      imagePullSecrets:
+      - name: quayadmin-robot-pull-secret
